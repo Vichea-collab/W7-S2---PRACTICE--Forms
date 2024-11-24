@@ -1,0 +1,90 @@
+/* General Styles */
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+body {
+    background-color: aliceblue;
+}
+.container {
+    background-color: white;
+    margin: 30vh 30vw;
+    padding: 20px;
+}
+#Username, #Email, #Password {
+    width: 100%;
+    font-size: 20px;
+}
+.login {
+    width: 100%;
+    font-size: 20px;
+    background-color: orange;
+    border: none;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login:hover {
+    background-color: orangered;
+}
+.search {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Checkbox Styling */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Unchecked State */
+input[type="checkbox"]:not(:checked) {
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Checked State */
+input[type="checkbox"]:checked {
+    background-color: orange;
+    border-color: orange;
+    box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.5);
+}
+
+/* Tick Mark */
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: white;
+}
+
+/* Hover Effect */
+input[type="checkbox"]:hover {
+    border-color: orangered;
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.5);
+}

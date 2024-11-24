@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Create Account</h1>
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <!-- First Name and Last Name Next to Each Other -->
+      <div class="form-group name-group">
+        <div>
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div>
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+      </div>
+
+      <!-- Password and Confirm Password in Same Line -->
+      <div class="form-group password-group">
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+      </div>
+      
+      <!-- Gender Options in Rows -->
+      <div class="form-group gender-group">
+        <label>Gender</label>
+        <div>
+          <label for="male">Male</label>
+          <input type="radio" id="male" name="gender" value="male">
+        </div>
+        <div>
+          <label for="female">Female</label>
+          <input type="radio" id="female" name="gender" value="female">
+        </div>
+        <div>
+          <label for="other">Other</label>
+          <input type="radio" id="other" name="gender" value="other">
+        </div>
+        <div>
+          <label for="prefer-not-to-say">Prefer Not to Say</label>
+          <input type="radio" id="prefer-not-to-say" name="gender" value="prefer-not-to-say">
+        </div>
+      </div>
+
+      <!-- Hobbies Options in Rows -->
+      <div class="form-group hobbies-group">
+        <label>Hobbies</label>
+        <div>
+          <label for="music">Music</label>
+          <input type="checkbox" id="music" name="hobbies" value="music">
+        </div>
+        <div>
+          <label for="sports">Sports</label>
+          <input type="checkbox" id="sports" name="hobbies" value="sports">
+        </div>
+        <div>
+          <label for="travel">Travel</label>
+          <input type="checkbox" id="travel" name="hobbies" value="travel">
+        </div>
+        <div>
+          <label for="movies">Movies</label>
+          <input type="checkbox" id="movies" name="hobbies" value="movies">
+        </div>
+      </div>
+
+      <!-- Source of Income -->
+      <div class="form-group">
+        <label for="income-source">Source of Income</label>
+        <select id="income-source" name="income-source">
+          <option value="employed">Employed</option>
+          <option value="self-employed">Self-Employed</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+
+      <!-- Income -->
+      <div class="form-group">
+        <label for="income">Income</label>
+        <input type="range" id="income" name="income" min="0" max="20000" step="1000">
+        <span id="income-value">0</span>
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="form-group">
+        <label for="profile-picture">Upload Profile Picture</label>
+        <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+      </div>
+
+      <!-- Age -->
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="18" max="100" required>
+      </div>
+
+      <!-- Bio -->
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio" rows="4" required></textarea>
+      </div>
+
+      <!-- Create Button -->
+      <div class="form-group">
+        <button type="submit" class="create-btn">Create</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const incomeSlider = document.getElementById('income');
+    const incomeValue = document.getElementById('income-value');
+
+    incomeSlider.oninput = function () {
+      incomeValue.textContent = this.value;
+    }
+  </script>
+</body>
+</html>
